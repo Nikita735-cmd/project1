@@ -5,7 +5,7 @@ from .models import News
 
 
 def index(request):
-    news = News.objects.order_by('-creater_at')
+    news = News.objects.all()
     context = {
         'news': news,
         'title': 'Список новостей'
